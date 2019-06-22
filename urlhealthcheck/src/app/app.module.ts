@@ -3,14 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { VoterparentComponent } from './voterparent/voterparent.component';
+import { VotechildComponent } from './votechild/votechild.component';
+import { AppbootstrapmoduleModule } from './appbootstrapmodule/appbootstrapmodule.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    VoterparentComponent,
+    VotechildComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AppbootstrapmoduleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
