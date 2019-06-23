@@ -1,14 +1,10 @@
 <div>
 
   <div>
-Voter Parent ::  Agreed Count: {{agreed}}   Disagreed Count: {{disagreed}}
+    Voter Parent :: Agreed Count: {{agreed}} Disagreed Count: {{disagreed}}
   </div>
   <div>
-      <app-votechild *ngFor='let vote of voters'
-                        [name]="vote"
-                        (voted)="onVotedEvent($event)"
-      
-      ></app-votechild>
+    <app-votechild *ngFor='let vote of voters' [name]="vote" (voted)="onVotedEvent($event)"></app-votechild>
   </div>
- 
+
 </div>

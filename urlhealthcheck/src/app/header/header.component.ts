@@ -8,6 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Input() title:string;
+  activeflag:any="HOME";
+  routerLinkVariable:any;
+
+  /**
+   * in html routerLink holds hardcoded value as string
+   * but directive[routerLink] holds variable 
+   * which can be chnaged dynamically inside .ts class file
+   * refer html file to see routerLink in action
+   */
 
   constructor() { }
 
@@ -16,4 +25,13 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  changeActive(value:any)
+  {
+    this.activeflag=value;
+  }
+
+
+
+
+  
 }

@@ -1,8 +1,14 @@
 
+<br>
 
-Voter Child Comp<br>
-
-{{name}}<br>
-<button pButton type="button" class="ui-button-info" (click)="onVote(true)" [disabled]="didVote">Agree</button>
- &nbsp<button  pButton type="button" class="ui-button-info" class="ui-button-info" (click)="onVote(false)" [disabled]="didVote">Disagree</button>
+Voter Child Comp
+<br>
+<br>
+{{name}}
+<br>
+<button pButton type="button" class="ui-button-info" (click)="onVote(true)" [disabled]="didVote" 
+label="Agree"></button>
+&nbsp;
+<button pButton type="button" class="ui-button-info" class="ui-button-info" (click)="onVote(false)"
+    [disabled]="didVote" label="Disagree"></button>
 <br>

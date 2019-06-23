@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 /**primeng related imports */
 import {ToastModule} from 'primeng/toast';
 import {ButtonModule} from 'primeng/button';
-
 @NgModule({
   declarations: [],
   imports: [

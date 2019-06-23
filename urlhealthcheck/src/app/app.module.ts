@@ -7,13 +7,15 @@ import { HeaderComponent } from './header/header.component';
 import { VoterparentComponent } from './voterparent/voterparent.component';
 import { VotechildComponent } from './votechild/votechild.component';
 import { AppbootstrapmoduleModule } from './appbootstrapmodule/appbootstrapmodule.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     VoterparentComponent,
-    VotechildComponent
+    VotechildComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
