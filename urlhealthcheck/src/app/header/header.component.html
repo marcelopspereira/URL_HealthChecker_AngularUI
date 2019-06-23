@@ -1,6 +1,26 @@
 <div class="topnav">
-  <a [ngClass]="activeflag==='HOME'?'active':''" routerLink="/Home"  (click)="changeActive('HOME')">URLHealthCheck</a>
-  <a [ngClass]="activeflag==='VOTE'?'active':''" routerLink="/Vote"  (click)="changeActive('VOTE')">Vote(input output)</a>
-  <a [ngClass]="activeflag==='ABOUT'?'active':''" routerLink="/About" (click)="changeActive('ABOUT')">About</a>
+  <a
+    [ngClass]="activeflag === 'HOME' ? 'active' : ''"
+    routerLink="/Home"
+    (click)="changeActive('HOME')"
+    >URLHealthCheck</a
+  >
+  <a
+    [ngClass]="activeflag === 'VOTE' ? 'active' : ''"
+    routerLink="/Vote"
+    (click)="changeActive('VOTE')"
+    >Vote(input output)</a
+  >
+  <a
+    [ngClass]="activeflag === 'URL' ? 'active' : ''"
+    routerLink="/URL"
+    (click)="changeActive('URL')"
+    >URL App</a
+  >
+  <a
+    [ngClass]="activeflag === 'ABOUT' ? 'active' : ''"
+    routerLink="/About"
+    (click)="changeActive('ABOUT')"
+    >About</a
+  >
 </div>
-
