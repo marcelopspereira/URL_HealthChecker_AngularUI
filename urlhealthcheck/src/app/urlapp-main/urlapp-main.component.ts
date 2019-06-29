@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 
-
 @Component({
   selector: "app-urlapp-main",
   templateUrl: "./urlapp-main.component.html",
@@ -21,11 +20,26 @@ export class URLAppMainComponent implements OnInit {
       { field: "appStatus", header: "Status" }
     ];
 
-    this.urls=[
-      {appCode:"abc",appGroup:"abcgroup",appUrl:"http://abc.com",appStatus:"200"},
-      {appCode:"cde",appGroup:"cdegroup",appUrl:"http://google.com",appStatus:"-1"},
-      {appCode:"xyz",appGroup:"xyzgroup",appUrl:"http://googli.com",appStatus:"403"}
-    ]
+    this.urls = [
+      {
+        appCode: "abc",
+        appGroup: "abcgroup",
+        appUrl: "http://abc.com",
+        appStatus: "200"
+      },
+      {
+        appCode: "cde",
+        appGroup: "cdegroup",
+        appUrl: "http://google.com",
+        appStatus: "-1"
+      },
+      {
+        appCode: "xyz",
+        appGroup: "xyzgroup",
+        appUrl: "http://googli.com",
+        appStatus: "403"
+      }
+    ];
   }
 
   onRowSelect(event) {
