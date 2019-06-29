@@ -1,0 +1,11 @@
+tr>td>div.success{
+background-color: greenyellow
+}
+
+tr>td>div.disabled{
+    background-color: #ffba01
+}
+
+tr>td>div.error{
+    background-color: red
+}

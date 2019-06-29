@@ -1,3 +1,90 @@
-<p>
-  urlapp-main works!
-</p>
+<div class="p-grid" style="margin-top: 10px">
+  <div class="p-col-12"></div>
+</div>
+<div class="p-grid p-nogutter">
+  <div class="p-col-2 p-col-nogutter">
+    Actions available
+  </div>
+  <div class="p-col-10 p-col-nogutter">
+    <div class="p-grid p-nogutter">
+      <div class="p-col-2 p-col-nogutter">
+        <button
+          pButton
+          type="button"
+          label="Check Status"
+          class="ui-button-info"
+        ></button>
+      </div>
+      <div class="p-col-5 p-col-nogutter">
+        <button
+          pButton
+          type="button"
+          label="Enable URL"
+          class="ui-button-success"
+        ></button>
+        &nbsp;
+        <button
+          pButton
+          type="button"
+          label="Disable URL"
+          class="ui-button-warning"
+        ></button>
+      </div>
+      <div class="p-col-5 p-col-nogutter"></div>
+    </div>
+  </div>
+</div>
+
+<div class="p-grid p-nogutter" style="margin-top:5px">
+  <p-table
+    [columns]="cols"
+    [value]="urls"
+    selectionMode="multiple"
+    [(selection)]="selectedUrls"
+    (onRowSelect)="onRowSelect($event)"
+    (onRowUnselect)="onRowUnselect($event)"
+  >
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns">
+          {{ col.header }}
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template
+      pTemplate="body"
+      let-rowData
+      let-columns="columns"
+      let-rowIndex="rowIndex"
+    >
+      <tr [pSelectableRow]="rowData" [pSelectableRowIndex]="rowIndex">
+        <td *ngFor="let col of columns">
+          <div
+            *ngIf="col.field === 'appStatus' && rowData[col.field] === '200'"
+            class="success"
+          >
+            SUCCESS
+          </div>
+          <div
+            *ngIf="col.field === 'appStatus' && rowData[col.field] === '-1'"
+            class="disabled"
+          >
+            DISABLED
+          </div>
+          <div
+            *ngIf="
+              col.field === 'appStatus' &&
+              (rowData[col.field] != '200' && rowData[col.field] != '-1')
+            "
+            class="error"
+          >
+            ERROR
+          </div>
+          <div *ngIf="col.field != 'appStatus'">
+            {{ rowData[col.field] }} <!-- values for other cols-->
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
