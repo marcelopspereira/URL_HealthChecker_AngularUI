@@ -18,6 +18,12 @@
     >URL App</a
   >
   <a
+    [ngClass]="activeflag === 'AGGRID' ? 'active' : ''"
+    routerLink="/AGGRID"
+    (click)="changeActive('AGGRID')"
+    >AgGrid</a
+  >
+  <a
     [ngClass]="activeflag === 'ABOUT' ? 'active' : ''"
     routerLink="/About"
     (click)="changeActive('ABOUT')"

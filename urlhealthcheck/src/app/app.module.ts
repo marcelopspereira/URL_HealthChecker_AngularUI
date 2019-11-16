@@ -9,6 +9,10 @@ import { VotechildComponent } from './votechild/votechild.component';
 import { AppbootstrapmoduleModule } from './appbootstrapmodule/appbootstrapmodule.module';
 import { HomeComponent } from './home/home.component';
 import { URLAppMainComponent } from './urlapp-main/urlapp-main.component';
+import { AgGridComponent } from './ag-grid/ag-grid.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { CellRendererComponent } from './cell-renderer/cell-renderer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,14 +21,19 @@ import { URLAppMainComponent } from './urlapp-main/urlapp-main.component';
     VoterparentComponent,
     VotechildComponent,
     HomeComponent,
-    URLAppMainComponent
+    URLAppMainComponent,
+    AgGridComponent,
+    CellRendererComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AppbootstrapmoduleModule
+    AppbootstrapmoduleModule,
+    AgGridModule.withComponents([CellRendererComponent]),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

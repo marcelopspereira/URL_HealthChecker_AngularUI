@@ -1,0 +1,21 @@
+<br>
+<br>
+<ag-grid-angular
+      #agGrid
+      id="myGrid"
+      class="ag-theme-balham"
+      [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      [rowData]="rowData"
+      style="width: 900px; height: 500px;" 
+      [enableSorting]="true"
+      [pagination]="true"
+      [enableFilter]="true"
+      editType = 'fullRow'
+      (gridReady)="onGridReady($event)"
+      [defaultColDef]="defaultColDef"
+      [suppressClickEdit]="true"
+      [suppressCellSelection]="true"
+      [frameworkComponents]="frameworkComponents"
+      [context]="context"
+    ></ag-grid-angular>

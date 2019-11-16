@@ -3,12 +3,14 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { VoterparentComponent } from "./voterparent/voterparent.component";
 import { URLAppMainComponent } from "./urlapp-main/urlapp-main.component";
+import { AgGridComponent } from './ag-grid/ag-grid.component';
 
 const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "/Home" },
   { path: "Home", component: HomeComponent },
   { path: "Vote", component: VoterparentComponent },
   { path: "URL", component: URLAppMainComponent },
+  { path: "AGGRID", component: AgGridComponent },
   { path: "About", component: HomeComponent }
 ];
 
