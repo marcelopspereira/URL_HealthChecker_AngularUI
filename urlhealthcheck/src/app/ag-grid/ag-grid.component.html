@@ -13,6 +13,8 @@
       [enableFilter]="true"
       editType = 'fullRow'
       (gridReady)="onGridReady($event)"
+      (rowEditingStopped)="rowEditStopped($event)"
+      (rowEditingStarted)="rowEditStart($event)"
       [defaultColDef]="defaultColDef"
       [suppressClickEdit]="true"
       [suppressCellSelection]="true"

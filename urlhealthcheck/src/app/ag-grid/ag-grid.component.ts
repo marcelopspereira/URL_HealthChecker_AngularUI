@@ -10,6 +10,8 @@ import { CellRendererComponent } from '../cell-renderer/cell-renderer.component'
 export class AgGridComponent implements OnInit {
 
   private gridApi:any;
+  private tempSelectedRow:string;
+  private tempRowNode:any;
   private gridColumnApi;
   private defaultColDef;
   private context;
@@ -17,6 +19,7 @@ export class AgGridComponent implements OnInit {
   //private components;
   columnDefs: any[];
   rowData: any[];
+  isSave:boolean=false;
  
   dropdownval:any[]=["Porsche", "Toyota", "Ford", "AAA", "BBB", "CCC"];
 
@@ -38,17 +41,17 @@ export class AgGridComponent implements OnInit {
   ];
 
   this.rowData = [
-      { car:'Forda',make: 'Toyota', model: 'Celica vnbvhhhg hjfghhf', price: 35000 },
-      { car:'Toyota',make: 'Ford', model: 'Mondeo', price: 32000 },
-      { car:'Ford',make: 'Porsche', model: 'Boxter', price: 72000 },
-      { car:'Ford',make: 'Toyota', model: 'Celica', price: 35000 },
-      { car:'Ford',make: 'Ford', model: 'Mondeo', price: 32000 },
-      { car:'Ford',make: 'Toyota', model: 'Celica', price: 35000 },
-      { car:'Ford',make: 'Ford', model: 'Mondeo', price: 32000 },
-      { car:'Ford',make: 'Toyota', model: 'Celica', price: 35000 },
-      { car:'Ford',make: 'Ford', model: 'Mondeo', price: 32000 },
-      { car:'Ford',make: 'Toyota', model: 'Celica', price: 35000 },
-      { car:'Ford',make: 'Ford', model: 'Mondeo', price: 32000 }
+      { id:1,car:'Forda',make: 'Toyota', model: 'Celica vnbvhhhg hjfghhf', price: 35000 },
+      { id:2,car:'Toyota',make: 'Ford', model: 'Mondeo', price: 32000 },
+      { id:3,car:'Ford',make: 'Porsche', model: 'Boxter', price: 72000 },
+      { id:4,car:'Ford',make: 'Toyota', model: 'Celica', price: 35000 },
+      { id:5,car:'Ford',make: 'Ford', model: 'Mondeo', price: 32000 },
+      { id:6,car:'Ford',make: 'Toyota', model: 'Celica', price: 35000 },
+      { id:7,car:'Ford',make: 'Ford', model: 'Mondeo', price: 32000 },
+      { id:8,car:'Ford',make: 'Toyota', model: 'Celica', price: 35000 },
+      { id:9,car:'Ford',make: 'Ford', model: 'Mondeo', price: 32000 },
+      { id:10,car:'Ford',make: 'Toyota', model: 'Celica', price: 35000 },
+      { id:11,car:'Ford',make: 'Ford', model: 'Mondeo', price: 32000 }
   ];
 
 
@@ -87,21 +90,58 @@ export class AgGridComponent implements OnInit {
             colKey: cell
           };
           this.gridApi.startEditingCell(startEditingParams);
+          
   }
 
-  methodFromParentEditCancel() {
-    this.gridApi.stopEditing(true);
+  methodFromParentEditCancel(flag:boolean) {
+    this.gridApi.stopEditing(flag);
   }
 
   methodFromParentEditSave() {
+
+    this.isSave=true;
     var cellDefs = this.gridApi.getEditingCells();
-    cellDefs.forEach( function(cellDef) {
-    console.log(cellDef);
-    console.log(cellDef.rowIndex);
-    console.log(cellDef.column.getId());
-    console.log(cellDef.floating);
-      });
+    const rowNodeToSave=this.gridApi.getRowNode(cellDefs[0].rowIndex);
   
+    //call backend to store new values in db
+
+    //end
+    this.methodFromParentEditCancel(false);
+    console.log("....methodfromparenteditsave")
+    console.log(rowNodeToSave);
+  }
+
+  rowEditStart(event)
+  {
+    this.tempSelectedRow=JSON.stringify(event.data);
+    var cellDefs = this.gridApi.getEditingCells();
+    this.tempRowNode=this.gridApi.getRowNode(cellDefs[0].rowIndex);
+
+    console.log(this.tempSelectedRow);
+    console.log(this.tempRowNode);
+  }
+
+  rowEditStopped(event)
+  {
+    
+    if(this.isSave)
+    {
+      console.log("logic is written in methodFromParentEditSave()");
+      
+    }
+    else{
+      console.log(event);
+      console.log("Save button is not clicked, hence restore old values");
+      
+      console.log(this.tempSelectedRow);
+      console.log(this.tempRowNode);
+
+      this.tempRowNode.setData(JSON.parse(this.tempSelectedRow));
+      this.tempRowNode=null;//setting null for fresh start
+      this.methodFromParentEditCancel(true);
+    }
+    //after processing set the default value i.e. false to isSave
+    this.isSave=false;
   }
 
   
