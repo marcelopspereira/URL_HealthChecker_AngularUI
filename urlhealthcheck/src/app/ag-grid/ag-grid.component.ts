@@ -84,7 +84,8 @@ export class AgGridComponent implements OnInit {
 
     this.defaultColDef = {
       editable: true,
-      resizable: true
+      resizable: true,
+      pagination:true
 
       // cellRenderer: "singleClickEditRenderer"
     };
@@ -97,14 +98,16 @@ export class AgGridComponent implements OnInit {
     // this.components = { singleClickEditRenderer: getRenderer() };
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
   title = "app";
 
   onGridReady(params) {
     this.gridApi = params.api;
     this.gridColumnApi = params.columnApi;
-
+    this.gridApi.paginationSetPageSize(10);
     params.api.sizeColumnsToFit();
   }
 
@@ -185,6 +188,12 @@ addNewRow()
     });
     console.log(res);
   
+}
+
+
+onPageSizeChanged(newPageSize) {
+  var value = document.getElementById("page-size").value;
+  this.gridApi.paginationSetPageSize(Number(value));
 }
 
 
