@@ -4,3 +4,54 @@
   <br />
   URLHealthCheck app--> health check app
 </p>
+
+<div class="ui-g">
+  <div class="ui-g-4">
+    <p-card>
+      
+          <span class="total">Profit($)</span>&nbsp;&nbsp;&nbsp;&nbsp; <span class="total_text">120 $</span>
+        
+      
+      <br>
+      
+      <highcharts-chart
+        [Highcharts] = "highcharts" 
+        [options] = "chartOptions" 
+        style = "width: 100%; height: 200px; display: block;">
+      </highcharts-chart>
+      <br><br>
+    </p-card>
+  </div>
+  <div class="ui-g-4">
+      <p-card>
+      
+          <span class="total">Booked</span>&nbsp;&nbsp;&nbsp;&nbsp; <span class="total_text">65</span>
+        
+      
+      <br>
+      
+      <highcharts-chart
+        [Highcharts] = "highcharts" 
+        [options] = "chartOptions" 
+        style = "width: 100%; height: 200px; display: block;">
+      </highcharts-chart>
+      <br><br>
+    </p-card>
+  </div>
+  <div class="ui-g-4">
+      <p-card>
+      
+          <span class="total">Applications</span>&nbsp;&nbsp;&nbsp;&nbsp; <span class="total_text">765</span>
+          <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City" optionLabel="name" [showClear]="true" class="dropdown"></p-dropdown>
+      <br>
+      
+      <highcharts-chart
+        [Highcharts] = "highcharts" 
+        [options] = "chartOptions" 
+        style = "width: 100%; height: 200px; display: block;">
+      </highcharts-chart>
+      <br><br>
+    </p-card>
+  </div>
+</div>
+

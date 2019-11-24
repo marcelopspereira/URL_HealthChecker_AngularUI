@@ -6,7 +6,7 @@ Page Size:
           <option value="500">500</option>
           <option value="1000">1000</option>
         </select>
-        
+
 <button (click)=addNewRow() class="custombutton">Add Record</button>
 <br><br>
 <ag-grid-angular
@@ -16,6 +16,7 @@ Page Size:
       [columnDefs]="columnDefs"
       [defaultColDef]="defaultColDef"
       [rowData]="rowData"
+      [rowSelection]="single"
       style="width: 900px; height: 500px;" 
       [enableSorting]="true"
       [pagination]="true"

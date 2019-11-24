@@ -13,24 +13,33 @@ import { AgGridComponent } from './ag-grid/ag-grid.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { CellRendererComponent } from './cell-renderer/cell-renderer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HighchartsChartComponent } from 'highcharts-angular';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
+ 
     HeaderComponent,
     VoterparentComponent,
     VotechildComponent,
     HomeComponent,
     URLAppMainComponent,
     AgGridComponent,
-    CellRendererComponent
+    CellRendererComponent,
+    HighchartsChartComponent
+    
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AppbootstrapmoduleModule,
     AgGridModule.withComponents([CellRendererComponent]),
-    FontAwesomeModule
+    FontAwesomeModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

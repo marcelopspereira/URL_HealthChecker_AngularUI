@@ -85,7 +85,7 @@ export class AgGridComponent implements OnInit {
     this.defaultColDef = {
       editable: true,
       resizable: true,
-      pagination:true
+      pagination: true
 
       // cellRenderer: "singleClickEditRenderer"
     };
@@ -98,9 +98,7 @@ export class AgGridComponent implements OnInit {
     // this.components = { singleClickEditRenderer: getRenderer() };
   }
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
 
   title = "app";
 
@@ -109,6 +107,20 @@ export class AgGridComponent implements OnInit {
     this.gridColumnApi = params.columnApi;
     this.gridApi.paginationSetPageSize(10);
     params.api.sizeColumnsToFit();
+  }
+
+  methodFromParentDeleteRow(row: any, cell: any) {
+    console.log("del row method called");
+    //backend logic to del data from backend
+
+    //end
+    var rowNode = this.gridApi.getRowNode(row);
+    console.log(rowNode);
+    rowNode.setSelected(true);
+    //not working
+    var selectedData = this.gridApi.getSelectedRows();
+    var res = this.gridApi.updateRowData({ remove: selectedData });
+   
   }
 
   methodFromParentEditStart(row: any, cell: any) {
@@ -156,6 +168,7 @@ export class AgGridComponent implements OnInit {
     console.log("rowEditStart event");
     this.tempSelectedRow = JSON.stringify(event.data);
     var cellDefs = this.gridApi.getEditingCells();
+    console.log(cellDefs);
     this.tempRowNode = this.gridApi.getRowNode(cellDefs[0].rowIndex);
 
     console.log(this.tempSelectedRow);
@@ -178,25 +191,20 @@ export class AgGridComponent implements OnInit {
     this.isSave = false;
   }
 
-addNewRow()
-{
-  
+  addNewRow() {
+    //add backend logic to add data in the db
+
+    //end
     var newItem = {};
     var res = this.gridApi.updateRowData({
       add: [newItem],
       addIndex: 0
     });
     console.log(res);
-  
+  }
+
+  onPageSizeChanged(newPageSize) {
+    var value = document.getElementById("page-size");
+    this.gridApi.paginationSetPageSize(Number(value));
+  }
 }
-
-
-onPageSizeChanged(newPageSize) {
-  var value = document.getElementById("page-size").value;
-  this.gridApi.paginationSetPageSize(Number(value));
-}
-
-
-
-}
-

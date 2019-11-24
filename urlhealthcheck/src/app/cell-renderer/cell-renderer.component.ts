@@ -23,6 +23,13 @@ export class CellRendererComponent implements ICellRendererAngularComp {
     );
   }
 
+  public invokeDelete() {
+    this.params.context.componentParent.methodFromParentDeleteRow(
+      `${this.params.node.rowIndex}`,
+      `${this.params.column.getId()}`
+    );
+  }
+
   public invokeEditCancel() {
     this.params.context.componentParent.methodFromParentEditCancel();
   }

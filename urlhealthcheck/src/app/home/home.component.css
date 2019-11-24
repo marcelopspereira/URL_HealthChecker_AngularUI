@@ -1,0 +1,19 @@
+.total{
+    font-size:1.5em ;
+    font-weight: lighter;
+    color:dimgrey
+}
+
+.total_text{
+    font-size:1.5em ;
+    color:indigo;
+    font-weight: bold;
+    
+}
+
+.dropdown{
+    font-size:.5em ;
+    color:black;
+    font-weight: bold;
+    float:right;
+}
