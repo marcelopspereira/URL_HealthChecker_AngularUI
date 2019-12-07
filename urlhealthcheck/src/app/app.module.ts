@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HighchartsChartComponent, HighchartsChartModule } from 'highcharts-angular';
 
 import { SidebarModule } from 'ng-sidebar';
+import { AuthenticationService } from './authentication.service';
 
 
 @NgModule({
@@ -38,6 +40,7 @@ import { SidebarModule } from 'ng-sidebar';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     AppRoutingModule,
     AppbootstrapmoduleModule,
@@ -46,7 +49,7 @@ import { SidebarModule } from 'ng-sidebar';
     SidebarModule.forRoot()
     
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 

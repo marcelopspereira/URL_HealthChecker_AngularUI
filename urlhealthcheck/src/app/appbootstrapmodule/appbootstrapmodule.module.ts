@@ -8,6 +8,7 @@ import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
 import {CardModule} from 'primeng/card';
 import {DropdownModule} from 'primeng/dropdown';
+import {TooltipModule} from 'primeng/tooltip';
 
 @NgModule({
   declarations: [],
@@ -17,7 +18,8 @@ import {DropdownModule} from 'primeng/dropdown';
     ButtonModule,
     TableModule,
     CardModule,
-    DropdownModule
+    DropdownModule,
+    TooltipModule
     
   ],
   exports:[ToastModule,
