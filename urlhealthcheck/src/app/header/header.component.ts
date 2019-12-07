@@ -11,6 +11,8 @@ export class HeaderComponent implements OnInit {
   activeflag:any="HOME";
   routerLinkVariable:any;
 
+  flag=false;
+
   /**
    * in html routerLink holds hardcoded value as string
    * but directive[routerLink] holds variable 
@@ -32,6 +34,10 @@ export class HeaderComponent implements OnInit {
 
 
 
-
+  togglenav()
+  {
+    this.flag=!this.flag;
+    console.log(this.flag);
+  }
   
 }

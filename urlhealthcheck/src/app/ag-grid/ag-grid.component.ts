@@ -166,12 +166,15 @@ export class AgGridComponent implements OnInit {
 
   rowEditStart(event) {
     console.log("rowEditStart event");
+
     this.tempSelectedRow = JSON.stringify(event.data);
     var cellDefs = this.gridApi.getEditingCells();
+    console.log("celldefs");
     console.log(cellDefs);
     this.tempRowNode = this.gridApi.getRowNode(cellDefs[0].rowIndex);
-
+    console.log("tempSelectedRow");
     console.log(this.tempSelectedRow);
+    console.log("tempRowNode");
     console.log(this.tempRowNode);
   }
 

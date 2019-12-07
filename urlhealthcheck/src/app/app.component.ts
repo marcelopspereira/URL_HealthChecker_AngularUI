@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'urlhealthcheck';
 
-  
+  private _opened: boolean = false;
+ 
+  private _toggleSidebar() {
+    this._opened = !this._opened;
+    this.t=!this.t;
+    console.log(this.t)
+  }
+  t=true;
+
 }

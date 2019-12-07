@@ -13,12 +13,17 @@ import { AgGridComponent } from './ag-grid/ag-grid.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { CellRendererComponent } from './cell-renderer/cell-renderer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { HighchartsChartComponent } from 'highcharts-angular';
+
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HighchartsChartComponent, HighchartsChartModule } from 'highcharts-angular';
+
+import { SidebarModule } from 'ng-sidebar';
+
 
 @NgModule({
   declarations: [
+    HighchartsChartComponent,
     AppComponent,
  
     HeaderComponent,
@@ -27,8 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     URLAppMainComponent,
     AgGridComponent,
-    CellRendererComponent,
-    HighchartsChartComponent
+    CellRendererComponent
     
   ],
   imports: [
@@ -39,6 +43,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppbootstrapmoduleModule,
     AgGridModule.withComponents([CellRendererComponent]),
     FontAwesomeModule,
+    SidebarModule.forRoot()
     
   ],
   providers: [],

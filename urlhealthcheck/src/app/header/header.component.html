@@ -1,3 +1,17 @@
+<div id="mySidebar" [ngClass]="flag===true?'sidebar active':'sidebar'">
+    <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
+    <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
+    <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  </div>
+  
+  <div   (click)="togglenav()" [ngClass]="flag==='true'?'active':''">
+    <button >☰ Open Sidebar</button>  
+    
+  </div>
+
+
+
 <div class="topnav">
   <a
     [ngClass]="activeflag === 'HOME' ? 'active' : ''"
@@ -30,3 +44,4 @@
     >About</a
   >
 </div>
+

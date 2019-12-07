@@ -31,7 +31,7 @@ export class CellRendererComponent implements ICellRendererAngularComp {
   }
 
   public invokeEditCancel() {
-    this.params.context.componentParent.methodFromParentEditCancel();
+    this.params.context.componentParent.methodFromParentEditCancel(true);
   }
 
   public invokeEditSave() {
