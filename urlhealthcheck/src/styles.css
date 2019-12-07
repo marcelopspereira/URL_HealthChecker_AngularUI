@@ -61,17 +61,27 @@
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  margin-top:83px;
+  margin-top:53px;
   float: left;
 
-  
+}
+
+.container.active{
+  margin-left:150px;
+  transition: 0.5s;
+
+}
+
+.container{
+  position: relative;
+  margin-left:155px;
  
 }
 
 
 
 .sidebar.active{
-  
+  transition: 0.5s;
   width: 150px;
 
   

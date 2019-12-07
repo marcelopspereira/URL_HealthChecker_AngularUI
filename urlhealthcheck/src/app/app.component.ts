@@ -10,11 +10,14 @@ export class AppComponent {
 
   private _opened: boolean = false;
  
-  private _toggleSidebar() {
-    this._opened = !this._opened;
-    this.t=!this.t;
-    console.log(this.t)
+  flag=false;
+
+  
+  valueFromHeader(event)
+  {
+    this.flag=event;
+    console.log("app comp");
+    console.log(this.flag);
   }
-  t=true;
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +11,8 @@ export class HeaderComponent implements OnInit {
   activeflag:any="HOME";
   routerLinkVariable:any;
 
+  @Output()
+  valueChange = new EventEmitter();
   flag=false;
 
   /**
@@ -32,12 +34,12 @@ export class HeaderComponent implements OnInit {
     this.activeflag=value;
   }
 
-
-
   togglenav()
   {
     this.flag=!this.flag;
+    this.valueChange.emit(this.flag);
     console.log(this.flag);
   }
+
   
 }

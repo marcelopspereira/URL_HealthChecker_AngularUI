@@ -1,10 +1,20 @@
 
 
-    <div class="p-grid">
+
+<div id="mySidebar" [ngClass]="flag===true?'sidebar active':'sidebar'" >
+    <a href="#home"><i class="fa fa-fw fa-home"></i> <span class="visible">Home</span></a>
+    <a href="#services"><i class="fa fa-fw fa-wrench"></i> <span class="visible">Services</span></a>
+    <a href="#clients"><i class="fa fa-fw fa-user"></i><span class="visible"> Clients</span></a>
+    <a href="#contact"><i class="fa fa-fw fa-envelope"></i><span class="visible"> Contact</span></a>
+  </div>
+
+    <div class="p-grid" >
       <div class="p-col-12">
-        <app-header [title]="title"> </app-header>
-        
+        <app-header [title]="title" (valueChange)="valueFromHeader($event)"> </app-header>
+        <div [ngClass]="flag===true?'container active':'container'">
         <router-outlet> </router-outlet>
       </div>
+      </div>
     </div>
- 
+
+
