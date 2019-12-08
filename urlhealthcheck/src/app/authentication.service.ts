@@ -7,7 +7,7 @@ import { filter, map } from 'rxjs/operators';
 })
 export class AuthenticationService {
 
-  username:string='sandeep';
+  username:string='Guest';
   password:string='password';
   constructor(private httpClient:HttpClient) { 
 
@@ -21,6 +21,7 @@ export class AuthenticationService {
           sessionStorage.setItem('username',username);
           let tokenStr= 'Bearer '+userData.token;
           sessionStorage.setItem('token', tokenStr);
+          this.username=username;
           return userData;
          }
        )
@@ -33,7 +34,8 @@ export class AuthenticationService {
       return !(user === null)
     }
     logOut() {
-      sessionStorage.removeItem('username')
+      sessionStorage.removeItem('username');
+      this.username="Guest";
     }
 
 }

@@ -21,6 +21,7 @@ import { HighchartsChartComponent, HighchartsChartModule } from 'highcharts-angu
 
 import { SidebarModule } from 'ng-sidebar';
 import { AuthenticationService } from './authentication.service';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AuthenticationService } from './authentication.service';
     HomeComponent,
     URLAppMainComponent,
     AgGridComponent,
-    CellRendererComponent
+    CellRendererComponent,
+    LoginComponent
     
   ],
   imports: [
