@@ -1,1 +1,35 @@
-<p>login works!</p>
+<div class="centerDiv">
+  <p-card header="Login" [style]="{ width: '450px', height: '320px'}">
+    <div style="height:35px">
+        <p-messages [(value)]="msgs"></p-messages>
+    </div>
+    <div style="float:center">
+    <div style="margin-top:40px">
+      <span style="margin-right:35px;line-height:20px;text-align: center;"
+        >Username
+      </span>
+      <span class="ui-inputgroup-addon">
+        <i class="pi pi-user" style="line-height: 1.25;"> </i>
+      </span>
+      <input type="text" pInputText placeholder="Username" [(ngModel)]="username" />
+    </div>
+
+
+
+    <div style="margin-top:25px">
+      <span style="margin-right:35px;line-height:20px;text-align: center;"
+        >Password&nbsp;
+      </span>
+      <span class="ui-inputgroup-addon">
+        <i class="fa fa-key" style="line-height: 1.25;" > </i>
+      </span>
+      <input type="password" pInputText placeholder="Password" [(ngModel)]="password"/>
+    </div>
+
+
+     <div style="float:right;margin-top:30px;margin-right:130px">
+    <button name="login" class="pmdbutton" (click)="login()">Login</button>
+    </div>
+   </div>
+  </p-card>
+</div>

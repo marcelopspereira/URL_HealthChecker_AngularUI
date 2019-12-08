@@ -9,6 +9,8 @@ import {TableModule} from 'primeng/table';
 import {CardModule} from 'primeng/card';
 import {DropdownModule} from 'primeng/dropdown';
 import {TooltipModule} from 'primeng/tooltip';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 
 @NgModule({
   declarations: [],
@@ -19,14 +21,19 @@ import {TooltipModule} from 'primeng/tooltip';
     TableModule,
     CardModule,
     DropdownModule,
-    TooltipModule
+    TooltipModule,
+    MessagesModule,
+    MessageModule
     
   ],
   exports:[ToastModule,
     ButtonModule,
     TableModule,
     CardModule,
-    DropdownModule
+    DropdownModule,
+    MessagesModule,
+    MessageModule,
+    TooltipModule
     
   ]
 })
