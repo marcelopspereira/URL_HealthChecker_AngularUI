@@ -7,3 +7,33 @@ button,input[type='button'],input[type='submit']{background-color:rgb(248, 162, 
     box-shadow: 0 0 6px 0 rgb(0, 0, 0) inset;
     margin-top: 3px;
 }
+
+div.note {
+    /* width: 140px; */
+    min-height:100px;
+    float: left;
+    position: relative;
+    /* width: 100%; */
+    background: rgb(179, 175, 241);
+    margin: 10px;
+    border-left: 2% solid rgb(246, 248, 246);
+    padding: 1%;
+    list-style-type: none;
+    white-space: pre-wrap; /* css-3 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+    white-space : normal;
+    transition: all 200ms ease-in-out;
+
+  }
+
+
+  
+  div.note:before {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content:'';
+    background:white;
+    border-right: 20px solid transparent;
+    border-top: 20px solid rgb(97, 93, 93);
+  }

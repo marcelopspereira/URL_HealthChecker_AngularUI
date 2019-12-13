@@ -12,6 +12,13 @@ export class URLAppMainComponent implements OnInit {
   selectedUrls: any[];
   urls: any[];
 
+  str="Lohin";
+  flag:boolean =true;
+
+  toggleflag()
+  {
+    this.flag=!this.flag;
+  }
   ngOnInit() {
     this.cols = [
       { field: "appCode", header: "App Code" },
