@@ -22,6 +22,9 @@ import { HighchartsChartComponent, HighchartsChartModule } from 'highcharts-angu
 import { SidebarModule } from 'ng-sidebar';
 import { AuthenticationService } from './authentication.service';
 import { LoginComponent } from './login/login.component';
+import { PanelComponent } from './panel/panel.component';
+import { PaneldetailsComponent } from './paneldetails/paneldetails.component';
+import { StepComponent } from './step/step.component';
 
 
 @NgModule({
@@ -36,7 +39,10 @@ import { LoginComponent } from './login/login.component';
     URLAppMainComponent,
     AgGridComponent,
     CellRendererComponent,
-    LoginComponent
+    LoginComponent,
+    PanelComponent,
+    PaneldetailsComponent,
+    StepComponent
     
   ],
   imports: [

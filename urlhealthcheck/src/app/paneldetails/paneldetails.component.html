@@ -1,0 +1,20 @@
+<div class="ui-g">
+    <div class="ui-g-12">
+        <div class="ui-g-12">
+            <span>Details of panel {{id}}</span>
+        </div>
+        <div class="ui-g-12" >
+            <span style="line-height: 30px;">Add Steps
+                <i (click)="addStep()"  class="pi pi-plus-circle" style="cursor:pointer;position:relative;top: 13px;font-size: 3.5em;color: rgb(3, 11, 59);"></i></span> 
+            <hr>
+        </div>
+        
+    </div>
+
+    <div class="ui-g-12 ui-g-nopad">
+        <div class="ui-g-4 ui-g-nopad" *ngFor="let step of arrOfSteps">
+            <app-step></app-step>
+        </div>   
+    </div>
+</div>
+

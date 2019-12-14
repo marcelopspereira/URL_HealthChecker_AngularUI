@@ -5,6 +5,8 @@ import { VoterparentComponent } from "./voterparent/voterparent.component";
 import { URLAppMainComponent } from "./urlapp-main/urlapp-main.component";
 import { AgGridComponent } from './ag-grid/ag-grid.component';
 import { LoginComponent } from './login/login.component';
+import { PanelComponent } from './panel/panel.component';
+import { PaneldetailsComponent } from './paneldetails/paneldetails.component';
 
 const routes: Routes = [
   
@@ -14,7 +16,10 @@ const routes: Routes = [
   { path: "Vote", component: VoterparentComponent },
   { path: "URL", component: URLAppMainComponent },
   { path: "AGGRID", component: AgGridComponent },
-  { path: "About", component: HomeComponent }
+  { path: "About", component: HomeComponent },
+  { path: "panel", component: PanelComponent,children:[{
+    path: "detail/:id", component: PaneldetailsComponent
+  }] }
 ];
 
 @NgModule({

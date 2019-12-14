@@ -1,0 +1,10 @@
+
+        <div class="note" style="padding:5px" (click)="toggleflag()">
+          Step 1<span style="float:right"><i class="fa fa-pencil-square-o"></i></span>
+          <hr>
+            Account: <span contenteditable="true" *ngIf="flag"> {{str}}</span><input *ngIf="!flag" type="text" [(ngModel)]=str><br>
+            timezone: <span contenteditable="true"> Login Page</span><br>
+            URL: <span contenteditable="true"> Login Page</span><br>
+            Action: <span contenteditable="true"> Login Page</span><br>
+          </div>
+
