@@ -12,7 +12,8 @@ export class StepComponent implements OnInit {
   flag:boolean =true;
    @Input()
    id;
- 
+   @Input()
+   delIconFlag;
 
    @Output()
    emitDel =new EventEmitter();

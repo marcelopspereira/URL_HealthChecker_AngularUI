@@ -14,7 +14,7 @@
     <div class="ui-g-12 ui-g-nopad">
         <div class="ui-g-4 ui-g-nopad" *ngFor="let step of arrOfSteps">
                 
-            <app-step [id]=step.id  (emitDel)="removeFromArr($event)"></app-step> 
+            <app-step [id]=step.id [delIconFlag]=stepid (emitDel)="removeFromArr($event)"></app-step> 
             
             
         </div>   
