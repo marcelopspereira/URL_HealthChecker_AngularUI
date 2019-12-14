@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-step',
@@ -9,16 +9,19 @@ export class StepComponent implements OnInit {
 
   str="Lohin";
   flag:boolean =true;
-
+   @Input()
+   id;
   constructor() { }
 
   ngOnInit() {
+    console.log("step init");
   }
 
 
   toggleflag()
   {
     this.flag=!this.flag;
+    console.log(this.str);
   }
 
 }

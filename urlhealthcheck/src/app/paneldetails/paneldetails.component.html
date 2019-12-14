@@ -13,7 +13,8 @@
 
     <div class="ui-g-12 ui-g-nopad">
         <div class="ui-g-4 ui-g-nopad" *ngFor="let step of arrOfSteps">
-            <app-step></app-step>
+            
+            <app-step [id]=step.id></app-step>
         </div>   
     </div>
 </div>
