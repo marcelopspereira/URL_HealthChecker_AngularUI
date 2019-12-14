@@ -11,6 +11,7 @@ import {DropdownModule} from 'primeng/dropdown';
 import {TooltipModule} from 'primeng/tooltip';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
+import {FieldsetModule} from 'primeng/fieldset';
 
 @NgModule({
   declarations: [],
@@ -23,7 +24,8 @@ import {MessageModule} from 'primeng/message';
     DropdownModule,
     TooltipModule,
     MessagesModule,
-    MessageModule
+    MessageModule,
+    FieldsetModule
     
   ],
   exports:[ToastModule,
@@ -33,7 +35,8 @@ import {MessageModule} from 'primeng/message';
     DropdownModule,
     MessagesModule,
     MessageModule,
-    TooltipModule
+    TooltipModule,
+    FieldsetModule
     
   ]
 })
