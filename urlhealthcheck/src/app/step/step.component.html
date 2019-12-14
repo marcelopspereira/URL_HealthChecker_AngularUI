@@ -1,6 +1,8 @@
 
-        <div class="note" style="padding:5px" (click)="toggleflag()">
-          <span style="font-weight: bolder;">STEP {{id}}</span><span style="float:right"><i class="fa fa-pencil-square-o"></i></span>
+        <div class="note" style="padding:5px">
+          <span style="font-weight: bolder;">STEP {{id}}</span><span style="float:right">
+            <i style="cursor:pointer" class= "fa fa-pencil-square-o" (click)="toggleflag()"></i>&nbsp;
+            <i style="cursor:pointer" class="fa fa-times" (click)="delItem(id)"></i></span>
           <hr>
             Account: <span contenteditable="true" *ngIf="flag"> {{str}}</span><input *ngIf="!flag" type="text" [(ngModel)]=str><br>
             timezone: <span contenteditable="true"> Login Page</span><br>

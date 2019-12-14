@@ -31,4 +31,21 @@ export class PaneldetailsComponent implements OnInit {
     this.arrOfSteps.push({"id":this.stepid});
   }
 
+  removeFromArr(event)
+  {
+    console.log("RemoveFromArr called",event);
+    let temparr=new Array();
+
+    this.arrOfSteps.filter(item=>
+      {
+        if(item.id!==event)
+        {
+          temparr.push(item);
+        }
+        console.log("temparr:",temparr);
+        this.arrOfSteps=temparr;
+        this.stepid=this.arrOfSteps.length;
+      });
+  }
+
 }

@@ -1,11 +1,11 @@
-<div class="ui-g">
-    <div class="ui-g-12">
-        <div class="ui-g-12">
-            <span>Details of panel {{id}}</span>
+<div class="ui-g ui-g-nopad">
+    <div class="ui-g-12 ui-g-nopad">
+        <div class="ui-g-12 ui-g-nopad" style="text-align: center;">
+            <h2><label>Details of panel {{id}}</label></h2>
         </div>
-        <div class="ui-g-12" >
-            <span style="line-height: 30px;">Add Steps
-                <i (click)="addStep()"  class="pi pi-plus-circle" style="cursor:pointer;position:relative;top: 13px;font-size: 3.5em;color: rgb(3, 11, 59);"></i></span> 
+        <div class="ui-g-12 ui-g-nopad" >
+            <span style="line-height: 30px;">ADD STEPS
+                <i (click)="addStep()"  class="pi pi-plus-circle" style="cursor:pointer;position:relative;top: 13px;font-size: 3.5em;color: rgb(21, 40, 150);"></i></span> 
             <hr>
         </div>
         
@@ -13,8 +13,10 @@
 
     <div class="ui-g-12 ui-g-nopad">
         <div class="ui-g-4 ui-g-nopad" *ngFor="let step of arrOfSteps">
+                
+            <app-step [id]=step.id  (emitDel)="removeFromArr($event)"></app-step> 
             
-            <app-step [id]=step.id></app-step>
+            
         </div>   
     </div>
 </div>
