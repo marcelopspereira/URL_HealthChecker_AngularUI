@@ -1,66 +1,94 @@
 /* Add a black background color to the top navigation */
+
 @import 'ag-grid-community/dist/styles/ag-grid.css';
 @import 'ag-grid-community/dist/styles/ag-theme-balham.css';
-
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,
-strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
-{margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:13px;-webkit-text-size-adjust:100%;font-family: 'FuturaLight', Fallback, sans-serif;letter-spacing:0.7px;}
-body{background-color: #fffbfb; /*-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;*/}
-
-
-* *{box-sizing:border-box}
-*{outline:0!important}
-
-h2 label{ font-family: 'FuturaBold', Fallback, sans-serif;text-transform:uppercase;font-size:14px;}
-
-button,input[type='button'],input[type='submit']{cursor:pointer;}
-
-button,input[type='button'],input[type='submit']{background-color:#1f3469;background-repeat:no-repeat;padding:2px 5px 2px 5px;text-transform: uppercase;font-size:13px;font-family: 'FuturaMedium', Fallback, sans-serif;border:0;letter-spacing:0.7px;
--webkit-box-shadow: 0px 1px 3px 0px rgba(127,127,127,0.75);-moz-box-shadow: 0px 1px 3px 0px rgba(127,127,127,0.75);box-shadow: 0px 1px 3px 0px rgba(127,127,127,0.75);min-width:50px;} 
-
-
-.title{
-  cursor: pointer;;
-  font:bold;
-  color:rgb(3, 59, 59)
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 13px;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'FuturaLight', Fallback, sans-serif;
+  letter-spacing: 0.7px;
 }
 
-.title:hover{
-  cursor: pointer;;
-  font:bolder;
-  color:rgb(3, 59, 59)
+body {
+  background-color: #fffbfb;
+  /*-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;*/
 }
 
+* * {
+  box-sizing: border-box
+}
+
+* {
+  outline: 0!important
+}
+
+h2 label {
+  font-family: 'FuturaBold', Fallback, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+button, input[type='button'], input[type='submit'] {
+  cursor: pointer;
+}
+
+button, input[type='button'], input[type='submit'] {
+  background-color: #1f3469;
+  background-repeat: no-repeat;
+  padding: 2px 5px 2px 5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: 'FuturaMedium', Fallback, sans-serif;
+  border: 0;
+  letter-spacing: 0.7px;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(127, 127, 127, 0.75);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(127, 127, 127, 0.75);
+  box-shadow: 0px 1px 3px 0px rgba(127, 127, 127, 0.75);
+  min-width: 50px;
+}
+
+.title {
+  cursor: pointer;
+  ;
+  font: bold;
+  color: rgb(3, 59, 59)
+}
+
+.title:hover {
+  cursor: pointer;
+  ;
+  font: bolder;
+  color: rgb(3, 59, 59)
+}
 
 /* Style the links inside the navigation bar */
 
-
-
-
-.visible{
-  display:none;
+.visible {
+  display: none;
 }
 
-.sidebar.active span.visible{
-  
-  display:inline-block;
+.sidebar.active span.visible {
+  display: inline-block;
   animation: showtext .6s ease-in;
   -webkit-animation: showtext .6s ease-in;
   -moz-animation: showtext .6s ease-in;
-
 }
+
 .navbar {
   -webkit-box-shadow: 0 8px 6px -6px #999;
   -moz-box-shadow: 0 8px 6px -6px #999;
   box-shadow: 0 8px 6px -6px #999;
-  margin-bottom: 30px;;
+  margin-bottom: 30px;
+  ;
   /* the rest of your styling */
 }
 
-
-
-
-.sidebar{
+.sidebar {
   height: 100%;
   width: 70px;
   position: fixed;
@@ -68,147 +96,155 @@ button,input[type='button'],input[type='submit']{background-color:#1f3469;backgr
   top: 0;
   left: 0;
   /* background-color: #111; */
-  background-color:#1f3469;
+  background-color: #1f3469;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  margin-top:46px;
+  margin-top: 46px;
   float: left;
-
 }
 
-.container.active{
-  height:100%;
-  width:100%;
-  margin-left:150px;
+.container.active {
+  height: 100%;
+  width: 100%;
+  margin-left: 150px;
   transition: 0.5s;
- 
 }
 
-.container{
-  
-  height:100%;
-  width:100%;
-  margin-left:70px;  
-  padding:0px;
+.container {
+  height: 100%;
+  width: 100%;
+  margin-left: 70px;
+  padding: 0px;
   background-color: white;
   /* margin-left:70px; */
-
 }
 
-
-
-.sidebar.active{
+.sidebar.active {
   transition: 0.5s;
   width: 150px;
-
-  
 }
 
-
-
 .sidebar a {
-
   transition: 0.3s;
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 30px;
   color: #818181;
   display: block;
-    
-  border-bottom:2px solid;
+  border-bottom: 2px solid;
   border-bottom-color: #818181;
- 
 }
 
 .sidebar.active a {
-
   font-size: 20px;
- 
 }
 
 @keyframes showtext {
-  0% { opacity: 0;}
-  20%{opacity: 0;}
-  60%{opacity: 0.4;}
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+
 @-moz-keyframes showtext {
-  0% { opacity: 0;}
-  20%{opacity: 0.3;}
-  60%{opacity: 0.6;}
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-
 
 .sidebar a:hover {
   color: whitesmoke;
   text-decoration: none;
-  border-bottom:2px solid;
-  border-bottom-color:whitesmoke;
+  border-bottom: 2px solid;
+  border-bottom-color: whitesmoke;
 }
 
-.sidebar a.test{
-  color:whitesmoke;
+.sidebar a.test {
+  color: whitesmoke;
   text-decoration: none;
-  border-bottom:2px solid;
-  border-bottom-color:whitesmoke;
-
+  border-bottom: 2px solid;
+  border-bottom-color: whitesmoke;
 }
 
-
-
-.centerDiv
-{
+.centerDiv {
   margin: 0 auto;
 }
 
-.pmdbutton{
-  color:whitesmoke;
-  width:70px;
+.pmdbutton {
+  color: whitesmoke;
+  width: 70px;
 }
 
-button:active 
-{
-    box-shadow: 0 0 4px 0 rgb(0, 0, 0) inset;
-    margin-top: 2px;
+button:active {
+  box-shadow: 0 0 4px 0 rgb(0, 0, 0) inset;
+  margin-top: 2px;
 }
 
-ul>li>a{
-  color:rgb(14, 14, 131);
+ul>li>a {
+  color: rgb(14, 14, 131);
   text-decoration: none;
   display: block;
-
 }
 
-ul>li>a:hover{
- 
+ul>li>a:hover {
   text-decoration: none;
   display: block;
-
 }
 
-ul>li:hover{
+ul>li:hover {
   background-color: rgb(238, 235, 235);
 }
 
 .shadow {
-  -webkit-box-shadow: 3px 3px 5px 6px white;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    3px 3px 5px 6px white;  /* Firefox 3.5 - 3.6 */
-  box-shadow:         3px 3px 5px 6px white;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  -webkit-box-shadow: 3px 3px 5px 6px white;
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 3px 3px 5px 6px white;
+  /* Firefox 3.5 - 3.6 */
+  box-shadow: 3px 3px 5px 6px white;
+  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
   background-color: white;
 }
 
 .scroll::-webkit-scrollbar {
-  width: .6em;
+  width: .5em;
 }
 
 .scroll::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 .scroll::-webkit-scrollbar-thumb {
-background-color: darkgrey;
-outline: 1px solid slategrey;
+  background-color: #8690a8;
+  outline: 1px solid slategrey;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #8690a8;
+  outline: 1px solid slategrey;
 }
