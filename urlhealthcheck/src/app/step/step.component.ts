@@ -8,8 +8,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class StepComponent implements OnInit {
 
-  str="Lohin";
-  flag:boolean =true;
+    str="Lohin";
+    flag:boolean =true;
    @Input()
    id;
    @Input()
