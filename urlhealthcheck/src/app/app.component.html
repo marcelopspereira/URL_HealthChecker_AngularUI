@@ -2,11 +2,11 @@
 <body>
 
 <div id="mySidebar" [ngClass]="flag===true?'sidebar active':'sidebar'" >
-    <a routerLink="/Home" routerLinkActive='test' ><i class="fa fa-fw fa-home" ></i> <span class="visible">Home</span></a>
-    <a routerLink="/Vote" routerLinkActive='test'><i class="fa fa-fw fa-wrench" pTooltip="Vote" tooltipPosition="right"></i> <span class="visible">Services</span></a>
-    <a routerLink="/URL" routerLinkActive='test'><i class="fa fa-fw fa-user"></i><span class="visible" pInputText  pTooltip="Clients" tooltipPosition="right"> Clients</span></a>
-    <a routerLink="/AGGRID" routerLinkActive='test'><i class="fa fa-fw fa-envelope"></i><span class="visible" pInputText  pTooltip="Contact" tooltipPosition="right"> Contact</span></a>
-    <a routerLink="/panel" routerLinkActive='test'><i class="fa fa-fw fa-envelope"></i><span class="visible" pInputText  pTooltip="Contact" tooltipPosition="right"> Panel</span></a>
+    <a routerLink="/Home" routerLinkActive='test' ><i class="fa fa-fw fa-home" pInputText pTooltip="Home" tooltipPosition="right"></i> <span class="visible">Home</span></a>
+    <a routerLink="/Vote" routerLinkActive='test'><i class="fa fa-fw fa-wrench" pInputText pTooltip="Vote" tooltipPosition="right"></i> <span class="visible">Services</span></a>
+    <a routerLink="/URL" routerLinkActive='test'><i class="fa fa-fw fa-user" pInputText  pTooltip="URL" tooltipPosition="right"></i><span class="visible" > Clients</span></a>
+    <a routerLink="/AGGRID" routerLinkActive='test'><i class="fa fa-fw fa-envelope"  pInputText  pTooltip="Contact" tooltipPosition="right"></i><span class="visible" > Contact</span></a>
+    <a routerLink="/panel" routerLinkActive='test'><i class="fa fa-fw fa-tasks" pInputText  pTooltip="Panel" tooltipPosition="right"></i><span class="visible"> Panel</span></a>
   </div>
 
 
