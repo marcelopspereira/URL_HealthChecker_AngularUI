@@ -1,0 +1,2 @@
+1. docker image build -t name .    --> from the dir where you have kept dockerfile
+2. docker run -p 8888:80 --detach --name namedocker <imagename>  --> instead of port 8080 just give 80 otherwise it will not work.
