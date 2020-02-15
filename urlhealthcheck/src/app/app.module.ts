@@ -17,7 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HighchartsChartComponent, HighchartsChartModule } from 'highcharts-angular';
+
 
 import { SidebarModule } from 'ng-sidebar';
 import { AuthenticationService } from './authentication.service';
@@ -29,7 +29,7 @@ import { StepComponent } from './step/step.component';
 
 @NgModule({
   declarations: [
-    HighchartsChartComponent,
+    
     AppComponent,
  
     HeaderComponent,

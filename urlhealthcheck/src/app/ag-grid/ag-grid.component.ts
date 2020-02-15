@@ -7,12 +7,12 @@ import { CellRendererComponent } from "../cell-renderer/cell-renderer.component"
   styleUrls: ["./ag-grid.component.css"]
 })
 export class AgGridComponent implements OnInit {
-  private gridApi: any;
-  private tempSelectedRow: string;
-  private tempRowNode: any;
-  private gridColumnApi;
-  private defaultColDef;
-  private context;
+  public gridApi: any;
+  public tempSelectedRow: string;
+  public tempRowNode: any;
+  public gridColumnApi;
+  public defaultColDef;
+  public context;
   frameworkComponents;
   //private components;
   columnDefs: any[];

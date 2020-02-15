@@ -1,6 +1,6 @@
 <br>
 Page Size:
-        <select (change)="onPageSizeChanged()" id="page-size">
+      <select  id="page-size">
           <option value="10" selected="">10</option>
           <option value="100">100</option>
           <option value="500">500</option>
@@ -16,8 +16,8 @@ Page Size:
       [columnDefs]="columnDefs"
       [defaultColDef]="defaultColDef"
       [rowData]="rowData"
-      [rowSelection]="single"
-      style="width: 900px; height: 500px;" 
+      
+            style="width: 900px; height: 500px;" 
       [enableSorting]="true"
       [pagination]="true"
       [enableFilter]="true"
